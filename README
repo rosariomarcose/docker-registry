@@ -1,9 +1,0 @@
-docker run --rm --entrypoint htpasswd httpd:2 -Bbn usuario MinhaSenhaForte123 > registry/auth/htpasswd
-
-O que isso faz?
-* gera um usuário usuario
-* senha criptografada em bcrypt no arquivo htpasswd
-
-docker login localhost:5000
-
-curl -u usuario:MinhaSenhaForte123 http://SEU_IP:5000/v2/_catalog
